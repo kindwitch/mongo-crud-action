@@ -1,13 +1,10 @@
 'use client'
 
 import { deleteTopic } from '@/actions/topicActions'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import { HiOutlineTrash } from 'react-icons/hi'
 
 export default function RemoveBtn({ id }: { id: string }) {
-  const router = useRouter()
-
   async function removeTopic() {
     const confirmed = confirm(`이 토픽을 지울까요?${id}`)
     if (confirmed) {
